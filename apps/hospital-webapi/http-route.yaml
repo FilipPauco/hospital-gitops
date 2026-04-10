@@ -50,7 +50,7 @@ spec:
           port: 80
     - matches:
         - path:
-            type: Exact
+            type: PathPrefix
             value: /xpaucof-hospital-openapi
       filters:
         - type: URLRewrite
