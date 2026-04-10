@@ -1,0 +1,65 @@
+apiVersion: gateway.networking.k8s.io/v1
+kind: HTTPRoute
+metadata:
+  name: xpaucof-hospital-webapi
+spec:
+  parentRefs:
+    - name: wac-hospital-gateway
+      namespace: wac-hospital
+    - name: wac-hospital-gateway
+      namespace: wac-hospital-system
+  rules:
+    - matches:
+        - path:
+            type: PathPrefix
+            value: /xpaucof-hospital-api
+      filters:
+        - type: URLRewrite
+          urlRewrite:
+            path:
+              type: ReplacePrefixMatch
+              replacePrefixMatch: /api
+      backendRefs:
+        - group: ""
+          kind: Service
+          name: xpaucof-hospital-webapi
+          port: 80
+    - matches:
+        - path:
+            type: PathPrefix
+            value: /xmesiarikova-hospital-api
+      filters:
+        - type: URLRewrite
+          urlRewrite:
+            path:
+              type: ReplacePrefixMatch
+              replacePrefixMatch: /api
+      backendRefs:
+        - group: ""
+          kind: Service
+          name: xpaucof-hospital-webapi
+          port: 80
+    - matches:
+        - path:
+            type: PathPrefix
+            value: /xpaucof-hospital-openapi-ui
+      backendRefs:
+        - group: ""
+          kind: Service
+          name: xpaucof-hospital-openapi-ui
+          port: 80
+    - matches:
+        - path:
+            type: Exact
+            value: /xpaucof-hospital-openapi
+      filters:
+        - type: URLRewrite
+          urlRewrite:
+            path:
+              type: ReplacePrefixMatch
+              replacePrefixMatch: /openapi
+      backendRefs:
+        - group: ""
+          kind: Service
+          name: xpaucof-hospital-webapi
+          port: 80

@@ -1,0 +1,25 @@
+apiVersion: polyfea.github.io/v1alpha1
+kind: WebComponent
+metadata:
+  name: xmesiarikova-hospital-ufe-link
+spec:
+  microFrontend: polyfea-md-shell
+  element: polyfea-md-app
+  attributes:
+    - name: headline
+      value: Lôžka Xmesiarikova
+    - name: short-headline
+      value: Lôžka Xmesiarikova
+    - name: supporting-text
+      value: |
+        Spravuje lôžka pacientov na oddelení
+    - name: material-icon
+      value: bed
+    - name: href
+      value: ./xmesiarikova-hospital-wl
+  priority: 11
+  displayRules:
+    - anyOf:
+      - context-name: applications
+      - context-name: rail-content
+      - context-name: drawer-content

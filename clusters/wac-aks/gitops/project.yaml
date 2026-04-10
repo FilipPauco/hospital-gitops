@@ -1,0 +1,11 @@
+apiVersion: wac-fiit.github.io/v1alpha1
+kind: Project
+metadata:
+  name: xpaucof-hospital-wl
+spec:
+  title: "Správa nemocničného oddelenia"
+  description: "Spravuje vizity a lôžka pacientov na oddelení"
+  authors: "Filip Pauco, Mesiarikova"
+  frontendRepoUrl: "https://github.com/FilipPauco/hospital-ufe"
+  backendRepoUrl: "https://github.com/FilipPauco/hospital-webapi"
+  gitopsRepoUrl: "https://github.com/FilipPauco/hospital-gitops"

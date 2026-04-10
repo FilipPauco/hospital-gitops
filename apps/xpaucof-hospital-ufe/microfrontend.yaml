@@ -1,0 +1,9 @@
+apiVersion: polyfea.github.io/v1alpha1
+kind: MicroFrontend
+metadata:
+  name: xpaucof-hospital-ufe
+spec:
+  frontendClass: md-shell
+  service:
+    name: xpaucof-hospital-ufe
+  modulePath: build/hospital-ufe.esm.js

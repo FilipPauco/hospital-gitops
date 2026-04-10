@@ -1,0 +1,9 @@
+apiVersion: kustomize.config.k8s.io/v1alpha1
+kind: Component
+images:
+- name: fipaaa/hospital-ufe
+  newName: fipaaa/hospital-ufe # {"$imagepolicy": "wac-hospital:hospital-ufe:name"}
+  newTag: main.20260101.0000 # {"$imagepolicy": "wac-hospital:hospital-ufe:tag"}
+- name: fipaaa/hospital-webapi
+  newName: fipaaa/hospital-webapi # {"$imagepolicy": "wac-hospital:hospital-webapi:name"}
+  newTag: main.20260101.0000 # {"$imagepolicy": "wac-hospital:hospital-webapi:tag"}

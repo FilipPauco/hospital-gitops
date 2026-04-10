@@ -1,0 +1,28 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: xpaucof-hospital-ufe-deployment
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      pod: xpaucof-hospital-ufe-label
+  template:
+    metadata:
+      labels:
+        pod: xpaucof-hospital-ufe-label
+    spec:
+      containers:
+      - name: hospital-ufe-container
+        image: fipaaa/hospital-ufe
+        imagePullPolicy: Always
+        ports:
+        - name: http
+          containerPort: 8080
+        resources:
+          requests:
+            memory: "32M"
+            cpu: "0.01"
+          limits:
+            memory: "128M"
+            cpu: "0.1"

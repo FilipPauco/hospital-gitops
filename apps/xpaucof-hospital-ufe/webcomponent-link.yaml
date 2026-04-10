@@ -1,0 +1,25 @@
+apiVersion: polyfea.github.io/v1alpha1
+kind: WebComponent
+metadata:
+  name: xpaucof-hospital-ufe-link
+spec:
+  microFrontend: polyfea-md-shell
+  element: polyfea-md-app
+  attributes:
+    - name: headline
+      value: Vizity Xpaucof
+    - name: short-headline
+      value: Vizity Xpaucof
+    - name: supporting-text
+      value: |
+        Spravuje vizity pacientov na oddelení
+    - name: material-icon
+      value: event_note
+    - name: href
+      value: ./xpaucof-hospital-wl
+  priority: 10
+  displayRules:
+    - anyOf:
+      - context-name: applications
+      - context-name: rail-content
+      - context-name: drawer-content
