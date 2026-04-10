@@ -3,7 +3,7 @@ kind: Component
 images:
 - name: fipaaa/hospital-ufe
   newName: fipaaa/hospital-ufe
-  newTag: 1.0.0
+  newTag: 1.0.1
 - name: fipaaa/hospital-webapi
   newName: fipaaa/hospital-webapi
   newTag: 1.0.0
