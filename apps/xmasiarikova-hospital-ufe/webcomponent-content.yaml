@@ -1,20 +1,18 @@
 ﻿apiVersion: polyfea.github.io/v1alpha1
 kind: WebComponent
 metadata:
-  name: xpaucof-hospital-ufe-content
+  name: xmasiarikova-hospital-ufe-content
 spec:
   microFrontend: xpaucof-hospital-ufe
-  element: xpaucof-hospital-app
+  element: xmasiarikova-bed-app
   attributes:
-    - name: visit-api-base
-      value: /xpaucof-hospital-api
-    - name: bed-api-base
+    - name: api-base
       value: /xmasiarikova-hospital-api
     - name: ward-id
       value: bobulova-ward
     - name: base-path
-      value: /xpaucof-hospital-wl/
+      value: /xmasiarikova-hospital-wl/
   displayRules:
     - allOf:
       - context-name: main-content
-      - path: "^(\\.?/)?xpaucof-hospital-wl(/.*)?$"
+      - path: "^(\\.?/)?xmasiarikova-hospital-wl(/.*)?$"

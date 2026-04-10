@@ -5,7 +5,7 @@ metadata:
 spec:
   title: "Správa nemocničného oddelenia"
   description: "Spravuje vizity a lôžka pacientov na oddelení"
-  authors: "Filip Pauco, Mesiarikova"
+  authors: "Miroslava Masiarikova and Filip Pauco"
   frontendRepoUrl: "https://github.com/FilipPauco/hospital-ufe"
   backendRepoUrl: "https://github.com/FilipPauco/hospital-webapi"
   gitopsRepoUrl: "https://github.com/FilipPauco/hospital-gitops"

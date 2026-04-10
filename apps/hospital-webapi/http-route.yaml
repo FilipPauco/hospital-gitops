@@ -1,4 +1,4 @@
-apiVersion: gateway.networking.k8s.io/v1
+﻿apiVersion: gateway.networking.k8s.io/v1
 kind: HTTPRoute
 metadata:
   name: xpaucof-hospital-webapi
@@ -27,7 +27,7 @@ spec:
     - matches:
         - path:
             type: PathPrefix
-            value: /xmesiarikova-hospital-api
+            value: /xmasiarikova-hospital-api
       filters:
         - type: URLRewrite
           urlRewrite:

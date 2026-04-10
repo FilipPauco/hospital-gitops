@@ -13,7 +13,6 @@ labels:
 
 resources:
 - ../../../apps/xpaucof-hospital-ufe
-- ../../../apps/xmesiarikova-hospital-ufe
 - ../../../apps/hospital-webapi
 
 components:
