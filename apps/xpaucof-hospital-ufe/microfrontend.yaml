@@ -7,3 +7,4 @@ spec:
   service:
     name: xpaucof-hospital-ufe
   modulePath: build/hospital-ufe.esm.js
+  cacheBustingHash: "1.0.1"
